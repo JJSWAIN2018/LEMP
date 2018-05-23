@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t jjswain2018/opt_lemp .
+  - docker run jjswain2018/opt_lemp /bin/sh -c "php -v"
